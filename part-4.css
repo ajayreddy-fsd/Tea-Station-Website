@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: #f1f5f8;
+}
+
+:root {
+    --clr-primary: #678e3e;
+    --clr-primary-light: #beed8c;
+
+    --clr-grey-1: #102a42;
+    --clr-grey-5: #617d98;
+    --clr-grey-10: #f1f5f8;
+
+
+    --ff-primary: "Catamaran", sans-serif;
+    --ff-secondary: "Grand Hotel", cursive;
+
+    --letter-spacing: 3.5px;
+
+
+    /* following font sizes are for different media queries */
+    --h1-font-size1: 25px;
+    --h2-font-size1: 30px;
+    --p-font-size1: 14px;
+
+    --a-font-size: 15px;
+
+    --h1-font-size2: 35px;
+    --h2-font-size2: 40px;
+    --p-font-size2: 15px;
+}
+
+
+.products h1{
+    font-family: var(--ff-secondary);
+    color: var(--clr-primary);
+    letter-spacing: var(--letter-spacing);
+    text-transform: capitalize;
+    font-size: var(--h1-font-size1);
+    margin-top: 80px;
+}
+
+.products h2{
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-1);
+    letter-spacing: var(--letter-spacing);
+    text-transform: capitalize;
+    font-size: var(--h2-font-size1);
+    font-weight: bolder;
+    margin-bottom: 25px;
+}
+
+.products p{
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-5);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.products a{
+    text-decoration: none;
+    color: white;
+    background: var(--clr-primary);
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+    padding: 10px 10px;
+    width: 130px;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 60px;
+
+    transition: all 0.5s 0s;
+}
+
+
+.product-info{
+    margin: 30px;
+}
+
+
+
+
+/* the following is the styling of image & caption blocks */
+.product-1 img, .product-2 img, .product-3 img{
+    width: 90%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    display: block;
+    margin: 30px;
+}
+
+
+/* The following are h3's & p's of products 1,2,3 */
+.products h3, .product-1 p, .product-2 p, .product-3 p{
+    margin: 5px 36px;
+}
+
+.products h3{
+    font-size: 17px;
+    text-transform: capitalize;
+    letter-spacing: var(--letter-spacing);
+}
+
+.product-1 p, .product-2 p, .product-3 p{
+    color: var(--clr-primary);
+    font-weight: bolder;
+    letter-spacing: var(--letter-spacing);
+}
+
+.product-3{
+    margin-bottom: 100px;
+/* [this the extra space created at the end of this part] */
+}
+
+
+/* end of styling */
+
+
+
+
+
+
+
+/* media queries start */
+@media screen and (min-width:700px){
+
+    .products h1{
+        font-size: var(--h1-font-size2);
+    }
+
+    .products h2{
+        font-size: var(--h2-font-size2);
+    }
+
+    .products p{
+        font-size: var(--p-font-size2);
+    }
+
+    .product-1, .product-2, .product-3{
+        width: 48%;
+        float: left;
+    }
+
+}
+
+@media screen and (min-width:1050px){
+
+    .product-1, .product-2, .product-3{
+        width: 33%;
+        float: left;
+    }
+
+}
+
+/* in this media query, everything aligns in a single line */
+@media screen and (min-width:1200px){
+
+    .product-info{
+        float: left;
+        margin-left: 8%;
+    }
+
+    .product-1, .product-2, .product-3{
+        margin-top: 60px;
+        width: 21%;
+        float: left;
+    }
+
+}
+
+/* media queries end */
+
+
+
+
+/* transition starts */
+.products a:hover{
+    background: var(--clr-primary-light);
+    color: var(--clr-primary);
+}

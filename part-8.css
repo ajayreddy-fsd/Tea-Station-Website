@@ -1,0 +1,164 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: #678e3e;
+    --clr-primary-light: #beed8c;
+
+    --clr-grey-1: #102a42;
+    --clr-grey-5: #617d98;
+    --clr-grey-10: #f1f5f8;
+
+
+    --ff-primary: "Catamaran", sans-serif;
+    --ff-secondary: "Grand Hotel", cursive;
+
+    --letter-spacing: 3.5px;
+
+
+    /* following font sizes are for different media queries */
+    --h1-font-size1: 25px;
+    --h2-font-size1: 30px;
+    --p-font-size1: 14px;
+
+    --a-font-size: 15px;
+
+    --h1-font-size2: 35px;
+    --h2-font-size2: 40px;
+    --p-font-size2: 15px;
+}
+
+/* the following is the 
+styling for the menu-icon */
+.menu{
+    color: var(--clr-primary);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    margin: 40px;
+    z-index: 5;
+
+    animation: m 1.5s infinite;
+}
+
+
+/* the following is the styling for 
+navigation links of menu bar */
+a{
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    color: var(--clr-grey-5);
+    font-size: 19px;
+    font-family: var(--ff-primary);
+    letter-spacing: var(--letter-spacing);
+    font-weight: bold;
+    padding: 3px 20px;
+
+    transition: all 0.5s 0s;
+}
+
+nav{
+    padding-top: 63px;
+    background: var(--clr-grey-10);
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+    /* why the above prop ?
+    when applied the transition effects, the transition is crossing it's boundaries in the X-direction, to limit that, i have used thid=s porperty */
+
+    position: relative;
+    /* the above prop is to position the 
+    cross-mark properly */
+
+    box-shadow: 3.5px 0px 5px -2px rgba(0,0,0,0.4);
+    /* why the above property, so that nav-bar will be distinguishable */
+}
+
+
+
+/* the following styling is to style the cross-mark & positioning it properly */
+.nav-parent i{
+    color: rgb(242,156,156);
+    position: absolute;
+    top: 2.1%;
+    right: 17px;
+    font-size: 40px;
+}
+
+.fa-times{
+    transition: all 0.5s 0s;
+}
+
+h3{
+    transition: all 0.5s 0s;
+}
+
+/* styling is done */
+
+
+
+
+
+
+
+/* animations & transitions start */
+/* the following animation is for menu-bar */
+@keyframes m{
+
+    0%{
+        transform: scale(4);
+    }
+
+    50%{
+        transform: scale(2);
+    }
+
+    100%{
+        transform: scale(4);
+    }
+
+}
+
+/* the following transition is for navigation-links */
+li a:hover{
+    background: var(--clr-primary-light);
+    box-shadow: -5px 0px 0px 0px var(--clr-primary);
+    transform: translateX(5px);
+    color: var(--clr-primary);
+}
+
+li a:hover h3{
+    transform: translateX(15px);
+}
+
+/* the following transition is for close icon */
+.fa-times:hover{
+    color: rgba(187,37,37,255);
+}
+
+/* animaitons & transitions end */
+
+
+
+
+
+
+
+
+/* media queries start */
+@media screen and (min-width:700px){
+
+    nav{
+        width: 25vw;
+    }
+
+}
+/* media queries end */
+
+
+

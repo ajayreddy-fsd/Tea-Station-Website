@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: #678e3e;
+    --clr-primary-light: #beed8c;
+
+    --clr-grey-1: #102a42;
+    --clr-grey-5: #617d98;
+    --clr-grey-10: #f1f5f8;
+
+    --clr-white: #fff;
+
+    --ff-primary: "Catamaran", sans-serif;
+    --ff-secondary: "Grand Hotel", cursive;
+
+    --letter-spacing: 3.5px;
+}
+
+
+.img-container{
+    border: 8px solid var(--clr-primary);
+
+    overflow: hidden; 
+    /* so that zoom effect won't cross it's border */
+}
+
+.img-container img{
+    display: block;
+
+    transition: all 0.5s 0s;
+}
+
+.remaining h1{
+    color: var(--clr-primary);
+    font-family: var(--ff-secondary);
+    letter-spacing: var(--letter-spacing);
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+.remaining h2{
+    color: var(--clr-grey-1);
+    font-family: var(--ff-primary);
+    letter-spacing: var(--letter-spacing);
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.remaining p{
+    color: var(--clr-grey-5);
+    font-family: var(--ff-primary);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.remaining a{
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    background: var(--clr-primary);
+    color: white;
+    width: 142px;
+    padding: 8px 12px;
+    letter-spacing: var(--letter-spacing);
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: var(--ff-primary);
+
+    transition: all 0.5s 0s;
+}
+
+/* styling is done */
+
+
+
+
+
+
+
+/* transition start */
+.img-container img:hover{
+    transform: scale(1.25);
+}
+
+.remaining a:hover{
+    background: var(--clr-primary-light);
+    color: var(--clr-primary);
+}
+/* transition end */
+
+
+
+
+
+
+
+/* now let's start media queries */
+@media screen and (min-width:350px){
+
+    .img-container{
+        width: 80%;
+        margin: 85px 30px;
+        margin-bottom: 60px;
+
+        max-width: 500px;
+        /* [why this, since we filled the width with %, this will help in limiting it's width] */
+    }
+
+
+    .img-container img{
+        width: 100%;  
+        /*[why width is 100%, as % is relative 
+        to parent & 100% will fill it's parent completely, here img's parent is img-container] */
+
+        max-width: 500px;
+        /*[why this, since we filled the width with %, this will help in limiting it's width] */
+    }
+
+
+    .remaining h1, .remaining h2, .remaining p, .remaining a{
+        margin-left: 30px;
+    }
+
+    .remaining p{
+        margin-top: 20px;
+    }
+
+    .remaining a{
+        margin-top: 20px;
+        margin-bottom: 90px;
+    }
+
+
+}
+
+@media screen and (min-width:700px){
+
+    .img-container{
+        margin: 85px 60px;
+        margin-bottom: 60px;
+    }
+
+    .remaining h1, .remaining h2, .remaining p, .remaining a{
+        margin-left: 60px;
+    }
+
+    .remaining h1{
+        font-size: 35px;
+    }
+
+    .remaining h2{
+        font-size: 40px;
+    }
+
+    .remaining p{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .remaining a{
+        margin-top: 20px;
+        margin-bottom: 90px;
+    }
+
+}
+
+@media screen and (min-width:1050px){
+
+    .img-container{
+        float: left;
+    }
+
+    .remaining{
+        position: absolute;
+        left: 600px;
+        top: 90px;
+        margin-left: 20px; 
+    }
+
+    .about-container{
+        margin-left: 4%;
+    }
+
+}
+

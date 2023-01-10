@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: #678e3e;
+    --clr-primary-light: #beed8c;
+
+    --clr-grey-1: #102a42;
+    --clr-grey-5: #617d98;
+    --clr-grey-10: #f1f5f8;
+
+    --clr-white: #fff;
+
+    --ff-primary: "Catamaran", sans-serif;
+    --ff-secondary: "Grand Hotel", cursive;
+
+    --letter-spacing: 3.5px;
+}
+
+
+.skill-1, .skill-2, .skill-3, .skill-4{
+    background: var(--clr-grey-10);
+    width: 50%;
+    height: 33%;
+    float: left;
+    padding: 50px;
+
+    transition: all 0.5s 0s;
+}
+
+
+.skills i{
+    color: var(--clr-primary);
+    font-size: 35px;
+    margin-bottom: 25px;
+
+    transition: all 1s 0s;
+}
+
+
+.skills h3{
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-1);
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: var(--letter-spacing);
+    margin-bottom: 15px;
+}
+
+
+.skills p{
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-5);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+/* end of styling, */
+
+
+
+
+
+
+
+
+
+/*now lets proceed to transitions */
+
+.skill-1:hover, .skill-2:hover, .skill-3:hover, .skill-4:hover{
+    background: white;
+    box-shadow: 0px 2px 0px var(--clr-primary);
+    z-index: 5;
+    transform: translateY(-2px);
+}
+
+.skill-1:hover i, .skill-2:hover i, .skill-3:hover i, .skill-4:hover i{
+    transform: translateY(-8px);
+}
+
+/* end of transition or hover-effects */
+
+
+
+
+
+
+
+
+
+/* media queries start */
+
+@media screen and (min-width:350px){
+
+    .skill-1, .skill-2, .skill-3, .skill-4{
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width:700px){
+
+    .skill-1, .skill-2, .skill-3, .skill-4{
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width:1050px){
+
+    .skill-1, .skill-2, .skill-3, .skill-4{
+        width: 25%;
+    }
+
+}
+
+/* media queries end */

@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #678e3e;
+    --clr-primary-light: #beed8c;
+
+    --clr-grey-1: #102a42;
+    --clr-grey-5: #617d98;
+    --clr-grey-10: #f1f5f8;
+
+    --clr-white: #fff;
+
+    --ff-primary: "Catamaran", sans-serif;
+    --ff-secondary: "Grand Hotel", cursive;
+
+    --letter-spacing: 3.5px;
+
+    /* following font sizes are for different media queries */
+    --h1-font-size1: 25px;
+    --h2-font-size1: 30px;
+    --p-font-size1: 14px;
+
+    --a-font-size: 15px;
+
+    --h1-font-size2: 35px;
+    --h2-font-size2: 40px;
+    --p-font-size2: 15px;
+  }
+
+
+/* !?part-1 started */
+/* !part-1 started */
+/* !part-1 started */
+/* !part-1 started */
+
+.part-1{
+    text-align: center;
+
+    overflow-x: hidden;
+    /* why the above prop?
+    when the load the webpage, only during initial 
+    few seconds, the webpage was getting horizontal-scroll,
+    to eliminate that, we used this property */
+}
+
+
+.set{
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('./tea-station/images/main-bcg.jpeg') scroll center/cover no-repeat;
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.shd-be-centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.shd-be-centered h2{
+    font-family: var(--ff-secondary);
+    color: var(--clr-primary);
+    letter-spacing: var(--letter-spacing);
+    font-size: 35px;
+
+    animation: b 4.5s 1;
+}
+
+.shd-be-centered h1{
+    font-family: var(--ff-primary);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+    font-size: 50px;
+    line-height: 65px;
+    margin-top: 25px;
+    font-weight: bold;
+
+    animation: c 4.5s 1;
+}
+
+.explore{
+    text-decoration: none;
+    display: block;
+    background: var(--clr-primary);
+    width: 140px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: white;
+    font-weight: bolder;
+    outline: solid var(--clr-primary) 2px;
+    outline-offset: 3.5px;
+
+    margin: 40px auto; /* 
+    [why i used this? since, i converted anchor-tag to a block level element, upon using margin = auto, will align that at center] */
+
+    transition: all 0.6s 0s;
+    animation: d 5s 1;
+}
+
+.separator{
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to left, var(--clr-primary), rgba(255, 217, 0, 0.75) , var(--clr-primary));
+}
+
+/* end of styling, now follows the animations & hover effects */
+
+
+
+
+
+/* the following code blocks consists of 
+all animations & transitions */
+
+
+.explore:hover{
+    background: var(--clr-primary-light);
+    color: var(--clr-primary);
+}
+
+
+/* the following animation is for first text line */
+@keyframes b{
+
+    0%{
+        transform: translateX(100vw);
+        opacity: 0.15;
+    }
+
+    33%{
+        transform: translateX(-20vw);
+        opacity: 0.3;
+    }
+
+    66%{
+        transform: translateX(15vw);
+        opacity: 0.7;
+    }
+
+    100%{
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+
+}
+
+
+/* the following animation is for second text line */
+@keyframes c{
+
+    0%{
+        transform: translateX(-100vw);
+        opacity: 0.15;
+    }
+
+    33%{
+        transform: translateX(20vw);
+        opacity: 0.3;
+    }
+
+    66%{
+        transform: translateX(-15vw);
+        opacity: 0.7;
+    }
+
+    100%{
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+
+}
+
+
+/* the following animation is for explore */
+@keyframes d{
+
+    0%{
+        transform: scale(0.7);
+        opacity: 0.15;
+    }
+
+    50%{
+        transform: scale(2);
+        opacity: 0.3;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+/* !part-1 ended */
+/* !part-1 ended */
+/* !part-1 ended */
+/* !?part-1 ended */
+
+/* !?part-4 started */
+/* !part-4 started */
+/* !part-4 started */
+/* !part-4 started */
+
+.part-4{
+    margin: 0;
+    padding: 0;
+    background: #f1f5f8;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    clear: both;
+    /* above property is compulsory to clear any float-properties used before */
+}
+
+.products h1{
+    font-family: var(--ff-secondary);
+    color: var(--clr-primary);
+    letter-spacing: var(--letter-spacing);
+    text-transform: capitalize;
+    font-size: var(--h1-font-size1);
+    margin-top: 80px;
+}
+
+.products h2{
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-1);
+    letter-spacing: var(--letter-spacing);
+    text-transform: capitalize;
+    font-size: var(--h2-font-size1);
+    font-weight: bolder;
+    margin-bottom: 25px;
+}
+
+.products p{
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-5);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.products a{
+    text-decoration: none;
+    color: white;
+    background: var(--clr-primary);
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+    padding: 10px 10px;
+    width: 130px;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 60px;
+
+    transition: all 0.5s 0s;
+}
+
+
+.product-info{
+    margin: 30px;
+}
+
+
+
+
+/* the following is the styling of image & caption blocks */
+.product-1 img, .product-2 img, .product-3 img{
+    width: 90%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    display: block;
+    margin: 30px;
+}
+
+/* continuing the styling of image & caption blocks */
+/* The following are h3's & p's of products 1,2,3 */
+.products h3, .product-1 p, .product-2 p, .product-3 p{
+    margin: 5px 36px;
+}
+
+.products h3{
+    font-size: 17px;
+    text-transform: capitalize;
+    letter-spacing: var(--letter-spacing);
+}
+
+.product-1 p, .product-2 p, .product-3 p{
+    color: var(--clr-primary);
+    font-weight: bolder;
+    letter-spacing: var(--letter-spacing);
+}
+
+.product-3{
+    margin-bottom: 100px;
+/* [this the extra space created at the end of this part] */
+}
+
+
+/* end of styling */
+
+
+
+
+
+
+
+/* media queries start */
+@media screen and (min-width:700px){
+
+    .products{
+        width: 100%;
+        height: 1270px;
+        background: var(--clr-grey-10);
+    }
+    /* why did i create the above block ?
+     when multiple parts are merged, this part was
+     loosing it's background color*/
+
+
+    .products h1{
+        font-size: var(--h1-font-size2);
+    }
+
+    .products h2{
+        font-size: var(--h2-font-size2);
+    }
+
+    .products p{
+        font-size: var(--p-font-size2);
+    }
+
+    .product-1, .product-2, .product-3{
+        width: 48%;
+        float: left;
+    }
+
+}
+
+@media screen and (min-width:1050px){
+
+    .products{
+        width: 100%;
+        height: 850px;
+        background: var(--clr-grey-10);
+    }
+    /* why did i create the above block ?
+     when multiple parts are merged, this part was
+     loosing it's background color*/
+
+
+    .product-1, .product-2, .product-3{
+        width: 33%;
+        float: left;
+    }
+
+}
+
+/* in this media query, everything aligns in a single line */
+@media screen and (min-width:1200px){
+
+    .products{
+        width: 100%;
+        height: 550px;
+        background: var(--clr-grey-10);
+    }
+    /* why did i create the above block ?
+     when multiple parts are merged, this part was
+     loosing it's background color*/
+
+
+    .product-info{
+        float: left;
+        margin-left: 8%;
+    }
+
+    .product-1, .product-2, .product-3{
+        margin-top: 60px;
+        width: 21%;
+        float: left;
+    }
+
+}
+
+/* media queries end */
+
+
+
+
+/* transition starts */
+.products a:hover{
+    background: var(--clr-primary-light);
+    color: var(--clr-primary);
+}
+
+
+/* !part-4 ended */
+/* !part-4 ended */
+/* !part-4 ended */
+/* !?part-4 ended */
+
+/* !?part-7 started */
+/* !part-7 started */
+/* !part-7 started */
+/* !part-7 started */
+
+.part-7{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.parent{
+    width: 100%;
+    height: 220px;
+    background: rgb(34,34,34);
+
+    position: relative;
+}
+
+.child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer i{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+    transition: all 0.3s 0s;
+}
+
+.footer p{
+    font-family: var(--ff-primary);
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer span{
+    color: var(--clr-primary);
+}
+
+/* styling is done */
+
+
+
+
+/* transition starts */
+
+.footer i:hover{
+    color: var(--clr-primary);
+}
+
+/* transition ends */
+
+/* !part-7 ended */
+/* !part-7 ended */
+/* !part-7 ended */
+/* !?part-7 ended */

@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+:root {
+    --clr-primary: #678e3e;
+    --clr-primary-light: #beed8c;
+
+    --clr-grey-1: #102a42;
+    --clr-grey-5: #617d98;
+    --clr-grey-10: #f1f5f8;
+
+
+    --ff-primary: "Catamaran", sans-serif;
+    --ff-secondary: "Grand Hotel", cursive;
+
+    --letter-spacing: 3.5px;
+
+
+    /* following font sizes are for different media queries */
+    --h1-font-size1: 25px;
+    --h2-font-size1: 30px;
+    --p-font-size1: 14px;
+
+    --a-font-size: 15px;
+
+    --h1-font-size2: 35px;
+    --h2-font-size2: 40px;
+    --p-font-size2: 15px;
+}
+
+
+.parent{
+    width: 100%;
+    height: 220px;
+    background: rgb(34,34,34);
+
+    position: relative;
+}
+
+.child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer i{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+    transition: all 0.3s 0s;
+}
+
+.footer p{
+    font-family: var(--ff-primary);
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer span{
+    color: var(--clr-primary);
+}
+
+/* styling is done */
+
+
+
+
+/* transition starts */
+
+.footer i:hover{
+    color: var(--clr-primary);
+}
+
+/* transition ends */
